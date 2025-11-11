@@ -5,7 +5,7 @@ This Is Farhana Akter Rova
 
 
 ## 🌐 Live Preview
-[Farhana Akter Rova](https://farhanaakterrova.github.io/Farhana-Akter-Rova/)
+[Farhana Akter Rova](https://farhanaar.github.io/RovEdge/)
 
 A Responsive Website portfolio for Freelancer ROVA
 
