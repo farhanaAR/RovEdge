@@ -141,30 +141,31 @@ document.addEventListener('keydown', function(event) {
 
 
 document.querySelectorAll('.card').forEach(card => {
-    const url = card.dataset.link;
-    if (!url) return;
+  const url = card.dataset.link;
+  if (!url) return;
 
-    let moved = false;
+  let moved = false;
+  let startX = 0;
 
-    // Detect drag vs click
-    card.addEventListener('mousedown', () => {
-        moved = false;
-    });
-    card.addEventListener('mousemove', () => {
-        moved = true;
-    });
+  // start click
+  card.addEventListener('pointerdown', (e) => {
+    moved = false;
+    startX = e.clientX;
+  });
 
-    // Open link on click if not dragging (carousel drag fix)
-    card.addEventListener('mouseup', () => {
-        if (!moved) {
-            window.open(url, "_blank");
-        }
-    });
+  // detect drag
+  card.addEventListener('pointermove', (e) => {
+    if (Math.abs(e.clientX - startX) > 5) {
+      moved = true; // user is dragging carousel
+    }
+  });
 
-    card.style.cursor = "pointer";
+  // end click
+  card.addEventListener('pointerup', () => {
+    if (!moved) {
+      window.open(url, "_blank");
+    }
+  });
+
+  card.style.cursor = "pointer";
 });
-
-
-
-
-
