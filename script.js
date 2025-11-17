@@ -138,3 +138,13 @@ document.addEventListener('keydown', function(event) {
     event.preventDefault();
   }
 });
+
+document.querySelectorAll('.card').forEach(card => {
+    const url = card.dataset.link;
+    if (url) {
+        card.style.cursor = "pointer";
+        card.addEventListener('click', () => window.open(url, '_blank'));
+    }
+});
+
+
