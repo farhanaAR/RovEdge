@@ -139,12 +139,32 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+
 document.querySelectorAll('.card').forEach(card => {
     const url = card.dataset.link;
-    if (url) {
-        card.style.cursor = "pointer";
-        card.addEventListener('click', () => window.open(url, '_blank'));
-    }
+    if (!url) return;
+
+    let moved = false;
+
+    // Detect drag vs click
+    card.addEventListener('mousedown', () => {
+        moved = false;
+    });
+    card.addEventListener('mousemove', () => {
+        moved = true;
+    });
+
+    // Open link on click if not dragging (carousel drag fix)
+    card.addEventListener('mouseup', () => {
+        if (!moved) {
+            window.open(url, "_blank");
+        }
+    });
+
+    card.style.cursor = "pointer";
 });
+
+
+
 
 
