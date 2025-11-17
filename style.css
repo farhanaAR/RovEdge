@@ -440,7 +440,7 @@
     pointer-events:none;
     backdrop-filter: blur(2px) saturate(1.05);
   }
-  .card:hover .overlay{opacity:1; transform:none; pointer-events:auto}
+  .card:hover .overlay{opacity:1; transform:none; pointer-events:none}
 
   .overlay .meta{
     max-width:80%;
@@ -847,3 +847,4 @@ form button {
     border-right: 2px solid #aaa; /* lighter cursor */
 
   }}
+
