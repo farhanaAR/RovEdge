@@ -140,32 +140,30 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+// Make portfolio cards clickable without breaking carousel drag
 document.querySelectorAll('.card').forEach(card => {
-  const url = card.dataset.link;
-  if (!url) return;
+    const url = card.getAttribute('data-link');
+    if (!url) return;
 
-  let moved = false;
-  let startX = 0;
+    let isDragging = false;
+    let startX = 0;
 
-  // start click
-  card.addEventListener('pointerdown', (e) => {
-    moved = false;
-    startX = e.clientX;
-  });
+    card.addEventListener('pointerdown', (e) => {
+        startX = e.clientX;
+        isDragging = false;
+    });
 
-  // detect drag
-  card.addEventListener('pointermove', (e) => {
-    if (Math.abs(e.clientX - startX) > 5) {
-      moved = true; // user is dragging carousel
-    }
-  });
+    card.addEventListener('pointermove', (e) => {
+        if (Math.abs(e.clientX - startX) > 5) {
+            isDragging = true;
+        }
+    });
 
-  // end click
-  card.addEventListener('pointerup', () => {
-    if (!moved) {
-      window.open(url, "_blank");
-    }
-  });
+    card.addEventListener('pointerup', () => {
+        if (!isDragging) {
+            window.open(url, "_blank");
+        }
+    });
 
-  card.style.cursor = "pointer";
+    card.style.cursor = "pointer";
 });
