@@ -437,10 +437,9 @@
     transform:translateY(10px);
     transition:opacity .28s var(--ease), transform .28s var(--ease);
     background-blend-mode:overlay;
-    pointer-events:none;
     backdrop-filter: blur(2px) saturate(1.05);
   }
-  .card:hover .overlay{opacity:1; transform:none; pointer-events:none}
+  .card:hover .overlay{opacity:1; transform:none}
 
   .overlay .meta{
     max-width:80%;
@@ -848,3 +847,8 @@ form button {
 
   }}
 
+.card {
+  pointer-events: auto;  /* receives clicks */
+}
+.card { pointer-events: auto !important;
+cursor: pointer; }
