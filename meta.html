@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RovEdge</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Home Button -->
+<div class="top-bar">
+    <a href="http://farhanaar.github.io/RovEdge/" class="home-btn">🏠 Home</a>
+</div>
+
+<h1 class="title" style="color: white;">Rovedge META Marketing Blog Gallery</h1>
+
+<!-- Gallery -->
+<div class="gallery-container">
+    <img src="./New folder/1.jpg" class="gallery-img" onclick="openImage(this.src)">
+    <img src="./New folder/2.jpg" class="gallery-img" onclick="openImage(this.src)">
+    <img src="./New folder/3.jpg" class="gallery-img" onclick="openImage(this.src)">
+    <img src="./New folder/4.jpg" class="gallery-img" onclick="openImage(this.src)">
+    <img src="./New folder/5.jpg" class="gallery-img" onclick="openImage(this.src)">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+
+<div class="content-box">
+    <h1>🚀 Boost Your Business with Smart META Ads – Get Real Results, Not Just Clicks</h1>
+    <p>
+        In today’s digital world, your customers are scrolling on Facebook, Instagram, and Messenger every single day — 
+        and smart businesses position themselves exactly where their audience is active.
+        <br><br>
+        At <b>Rovedge META Marketing</b>, we don’t just run ads. We create strategic, data-driven campaigns that deliver 
+        <b>sales, leads, and brand visibility that truly matter to your business.</b>
+    </p>
+
+    <h2>📌 Why Your Business Needs Meta Ads</h2>
+    <ul>
+        <li>✔ Reach people who are actively interested in your product</li>
+        <li>✔ Increase brand trust with professional ad creatives</li>
+        <li>✔ Drive high-quality leads and real conversions</li>
+        <li>✔ Track every performance metric</li>
+        <li>✔ Stay ahead with smart retargeting</li>
+    </ul>
+
+    <h2>🎯 What I Do for You</h2>
+    <ul>
+        <li>⭐ Audience Research & Targeting</li>
+        <li>⭐ Ad Creative & Copywriting</li>
+        <li>⭐ Budget Optimization</li>
+        <li>⭐ Retargeting Setup</li>
+        <li>⭐ Weekly Reporting</li>
+    </ul>
+
+    <h2>📞 Ready to Grow Faster?</h2>
+    <p>
+        Want your brand to look professional, attract real customers, and grow faster with Meta Ads?
+        <br><br>
+        👉 Let’s create ads that SELL.<br>
+        👉 Let’s turn clicks into customers.<br>
+        👉 Let’s build your brand the smart way.<br>
+    </p>
+</div>
+
+<!-- Reaction Buttons -->
+<div class="reaction-box">
+    <div class="reaction" onclick="addLike()">
+        👍
+        <div id="likeCount">0</div>
+    </div>
+
+    <div class="reaction" onclick="addComment()">
+        💬
+        <div id="commentCount">0</div>
+    </div>
+
+    <div class="reaction" onclick="copyLink()">
+        🔗
+        <div id="shareCount">0</div>
+    </div>
+</div>
+
+<div id="copyMessage" class="copy-message">Link Copied!</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
