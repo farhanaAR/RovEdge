@@ -852,3 +852,59 @@ form button {
 }
 .card { pointer-events: auto !important;
 cursor: pointer; }
+
+/* WhatsApp Floating Button */
+.whatsapp-chat {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Chat Bubble */
+.chat-bubble {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: #25D366;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 18px 18px 0 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    white-space: nowrap;
+
+    /* Show animation */
+    animation: bubbleUp 1s ease forwards,
+               hideBubble 1s ease forwards 10s; /* hide after 10 sec */
+}
+
+/* Show animation */
+@keyframes bubbleUp {
+    0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+    60% { opacity: 1; transform: translateY(-5px) scale(1.05); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Hide animation */
+@keyframes hideBubble {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(10px) scale(0.9); }
+}
