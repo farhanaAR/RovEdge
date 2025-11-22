@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RovEdge</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Home Button -->
+<div class="top-bar">
+    <h1 class="title" style="color: white;"> RovEdge</h1>
+    <a href="http://farhanaar.github.io/RovEdge/" class="home-btn">🏠 Home</a>
+    
+</div>
+
+<h1 class="title" style="color: rgb(56, 50, 50);">Rovedge Brand Creation Blog Gallery</h1>
+
+<section class="results-gallery">
+
+    <!-- Result Card 1 -->
+    <div class="result-card">
+        <img class="result-thumb" 
+             src="./New folder/10.jpg"
+             data-full="./New folder/10.jpg">
+        
+        <div class="result-info">
+            <h3>📌 Brand Logo Design</h3>
+             <p> A clean, modern, and meaningful logo crafted to represent the brand’s identity with clarity.  
+        The design ensures strong visual impact, easy recognition, and long-term usability across digital  
+        and print platforms.</p>
+        </div>
+    </div>
+
+    <div class="result-card">
+        <img class="result-thumb" 
+             src="./New folder/11.jpg"
+             data-full="./New folder/11.jpg">
+        
+        <div class="result-info">
+            <h3>📌 Brand Poster Design</h3>
+            <p>A visually appealing poster design created to showcase the brand message effectively.  
+        Combining creative layout, bold typography, and eye-catching visuals to increase engagement  
+        and promote the brand with a professional look.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- FULLSCREEN POPUP VIEWER -->
+<div id="popup">
+    <span id="popupClose">&times;</span>
+    <img id="popupImg" src="">
+</div>
+
+
+<!-- Fullscreen Preview -->
+<div id="imagePopup">
+    <span id="closePopup">&times;</span>
+    <img id="popupImage" src="">
+</div>
+
+
+
+<div class="content-box">
+    <h1>🎨 Professional Logo & Banner Design – Build a Brand That Stands Out</h1>
+    <p>
+        Your brand’s first impression starts with its visuals — and a powerful design can instantly  
+        attract trust, attention, and customers.  
+        <br><br>
+        At <b>Rovedge Creative Studio</b>, I create clean, modern, and impactful logo and banner designs  
+        that represent your brand’s identity with clarity and professionalism.
+    </p>
+
+    <h2>📌 Why High-Quality Design Matters</h2>
+    <ul>
+        <li>✔ Makes your brand instantly recognizable</li>
+        <li>✔ Builds trust and authority with your audience</li>
+        <li>✔ Enhances your brand’s digital and print presence</li>
+        <li>✔ Helps your business look premium and professional</li>
+        <li>✔ Converts viewers into real customers</li>
+    </ul>
+
+    <h2>🎯 What I Design for You</h2>
+    <ul>
+        <li>⭐ Custom Business Logos (Minimal, Modern, Luxury, Tech, Creative)</li>
+        <li>⭐ Social Media Banners & Cover Photos (Facebook, YouTube, LinkedIn)</li>
+        <li>⭐ Promotional Posters & Ad Graphics</li>
+        <li>⭐ Brand Identity Elements (icons, color palette, typographic styling)</li>
+        <li>⭐ High-Quality Files for Print & Digital Use</li>
+    </ul>
+
+    <h2>✨ My Design Approach</h2>
+    <p>
+        I focus on clean structure, balanced composition, and strategic color use —  
+        ensuring your brand looks polished, premium, and memorable every time.
+    </p>
+
+    <h2>📞 Ready to Build a Strong Brand Identity?</h2>
+    <p>
+        Want a logo or banner that reflects your brand’s personality and attracts more customers?<br><br>
+        👉 Let’s design something unique.<br>
+        👉 Let’s make your brand unforgettable.<br>
+        👉 Let’s bring your vision to life.<br>
+    </p>
+</div>
+
+<!-- Reaction Buttons -->
+<div class="reaction-box">
+    <div class="reaction" onclick="addLike()">
+        👍
+        <div id="likeCount">0</div>
+    </div>
+
+    <div class="reaction" onclick="addComment()">
+        💬
+        <div id="commentCount">0</div>
+    </div>
+
+    <div class="reaction" onclick="copyLink()">
+        🔗
+        <div id="shareCount">0</div>
+    </div>
+</div>
+
+<div id="copyMessage" class="copy-message">Link Copied!</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
