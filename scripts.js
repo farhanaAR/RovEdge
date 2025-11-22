@@ -48,3 +48,23 @@ function openImage(src) {
 function closeImage() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+const thumbs = document.querySelectorAll(".result-thumb");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popupImg");
+const popupClose = document.getElementById("popupClose");
+
+// Click any thumbnail → open fullscreen
+thumbs.forEach(img => {
+    img.addEventListener("click", () => {
+        popupImg.src = img.dataset.full;
+        popup.style.display = "flex";
+    });
+});
+
+// Close popup
+popupClose.addEventListener("click", () => popup.style.display = "none");
+popup.addEventListener("click", e => {
+    if (e.target === popup) popup.style.display = "none";
+});
+
