@@ -3,56 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>RovaEdge - Meta Marketing</title>
-  <meta name="description" content="RovaEdge is a Social Media Marketing Specialist and Growth Strategist in Bangladesh. Explore her portfolio, creative campaigns, and services to help brands grow online.">
-  <meta name="author" content="Farhana Akter Rova" />
-  <meta name="robots" content="index, follow" />
-  <meta name="Creator" content="MD Parvez Mussaruf" />
-  <!-- Standard Favicon -->
-  <link rel="icon" href="./Icons/favicon.ico" type="image/x-icon">
-  <!-- Android Chrome Icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="./Icons/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./Icons/android-chrome-512x512.png">
-  <!-- Apple Touch Icons (iPhone/iPad) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./Icons/apple-touch-icon.png">
-  <!-- PNG Favicons -->
-  <link rel="icon" type="image/png" sizes="16x16" href="./Icons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./Icons/favicon-32x32.png">
-
-
-<!-- Basic Meta Tags -->
-<meta name="description" content="Rovedge - Social Media Marketing Specialist and Growth Strategist. Explore my works, projects, and expertise in digital marketing.">
-<meta name="keywords" content="Rovedge, Social Media Marketing, Growth Strategist, Digital Marketing, Content Creator, Web Development, Branding, Portfolio, Rovedge, rovedge portfolio">
-<meta name="author" content="Farhana Akter Rova">
-
-<!-- Open Graph / Facebook / LinkedIn -->
-<meta property="og:title" content="Rovedge | Social Media Marketing Specialist & Growth Strategist">
-<meta property="og:description" content="Explore my works, strategies, and expertise in social media marketing and digital growth.">
-<meta property="og:image" content="https://raw.githubusercontent.com/farhanaakterrova/FarhanaAkterRova/main/Photos/Farhanaakterrova.png">
-<meta property="og:url" content="https://farhanaar.github.io/RovEdge/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Rovedge Portfolio">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rovedge | Social Media Marketing Specialist & Growth Strategist">
-<meta name="twitter:description" content="Discover my portfolio, marketing projects, and growth strategies.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/farhanaakterrova/FarhanaAkterRova/main/Photos/Farhanaakterrova.png">
-<meta name="twitter:url" content="https://x.com/rovedge">
-<meta name="twitter:site" content="@rovedge">
-
-
+<title>RovEdge</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <!-- Home Button -->
 <div class="top-bar">
+    <h1 class="title" style="color: white;"> RovEdge</h1>
     <a href="http://farhanaar.github.io/RovEdge/" class="home-btn">🏠 Home</a>
+    
 </div>
 
-<h1 class="title" style="color: white;">Rovedge META Marketing Blog Gallery</h1>
+<h1 class="title" style="color: rgb(56, 50, 50);">Rovedge META Marketing Blog Gallery</h1>
 
 <!-- Gallery -->
 <div class="gallery-container">
@@ -62,6 +25,49 @@
     <img src="./New folder/4.jpg" class="gallery-img" onclick="openImage(this.src)">
     <img src="./New folder/5.jpg" class="gallery-img" onclick="openImage(this.src)">
 </div>
+
+<section class="results-gallery">
+
+    <!-- Result Card 1 -->
+    <div class="result-card">
+        <img class="result-thumb" 
+             src="./New folder/8.jpg"
+             data-full="./New folder/8.jpg">
+        
+        <div class="result-info">
+            <h3>📌 Page Growth Result</h3>
+            <p>From <strong>67 likes → 1.1K likes</strong> and  
+               <strong>191 followers → 1.3K followers</strong> using targeted Meta Ads.</p>
+        </div>
+    </div>
+
+    <!-- Duplicate this block for more cards -->
+    <!-- Result Card 2 (Example placeholder) -->
+    <div class="result-card">
+        <img class="result-thumb" src="./New folder/9.jpg" data-full="./New folder/9.jpg">
+
+        <div class="result-info">
+            <h3>📌 Brand Boost Campaign</h3>
+            <p>Achieved 4× more engagement and strong customer reach within one week.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- FULLSCREEN POPUP VIEWER -->
+<div id="popup">
+    <span id="popupClose">&times;</span>
+    <img id="popupImg" src="">
+</div>
+
+
+<!-- Fullscreen Preview -->
+<div id="imagePopup">
+    <span id="closePopup">&times;</span>
+    <img id="popupImage" src="">
+</div>
+
+
 
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeImage()">
@@ -129,5 +135,4 @@
 <script src="scripts.js"></script>
 </body>
 </html>
-
 
