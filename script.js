@@ -156,7 +156,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         message: document.getElementById("message").value
     };
 
-    fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
+    fetch("https://script.google.com/macros/s/AKfycbw-wRgVYEPXpCsho5pCbnRt1dFqBHCiYUdLB7J1Z_Yvp2rW1t2Sds98JtTvRzBr4mht4Q/exec", {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
@@ -166,3 +166,4 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     document.getElementById("form-status").innerText = "Message sent successfully!";
     document.getElementById("contactForm").reset();
 });
+
