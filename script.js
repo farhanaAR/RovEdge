@@ -146,3 +146,23 @@ document.addEventListener('keydown', function(event) {
     event.preventDefault();
   }
 });
+//form
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    document.getElementById("form-status").innerText = "Message sent successfully!";
+    document.getElementById("contactForm").reset();
+});
