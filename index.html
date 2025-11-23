@@ -237,12 +237,14 @@
   <div class="contact-left">
     <h2>Contact Me</h2>
     <p>Let’s collaborate! Drop me a message and I’ll reply within 48 hours.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Tell me about your project" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <form id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" placeholder="Tell me about your project" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<p id="form-status" style="margin-top:10px; color:rgb(0,170,0);"></p>
   </div>
 
   <div class="contact-right">
@@ -312,6 +314,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
